@@ -4,8 +4,8 @@
     "password": "root",
     "database": "exampledb",
     "host": "localhost",
-    "dialect": "mysql",
-    "port": 8889
+    "dialect": "mysql"
+   
   },
   "test": {
     "username": "root",
@@ -13,7 +13,6 @@
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
-    "port": 8889,
     "logging": false
   },
   "production": {
