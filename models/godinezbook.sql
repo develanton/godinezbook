@@ -1,6 +1,8 @@
 DROP DATABASE IF EXISTS godinezbook;
 CREATE DATABASE godinezbook;
 
+USE godinezbook;
+
 CREATE TABLE usuarios (
 	id INT AUTO_INCREMENT NOT NULL,
 	name VARCHAR(50) NOT NULL,
@@ -10,7 +12,7 @@ CREATE TABLE usuarios (
 );
 
 CREATE TABLE posts (
-	id INT AUTO_INCREMENT NOT NULL,
+	id INT  NOT NULL AUTO_INCREMENT,
 	post TEXT NOT NULL,
-	PRIMARY KEY (id)
+	PRIMARY KEY ("id")
 );

@@ -1,13 +1,14 @@
 var db = require("../models");
 
-module.exports = function (app) {
+module.exports = function(app) {
   // Load index page
-  app.get("/", function (req, res) {
-    db.godinez.findAll({}).then(function (results) {
+  app.get("/", function(req, res) {
+    db.godinez.findAll({}).then(function(results) {
       res.render("profile", {
         msg: "Welcome!",
         godinez: results
       });
+      console.log(results);
     });
   });
 
