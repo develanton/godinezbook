@@ -4,26 +4,26 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      console.log(dbExamples);
+    db.posts.findAll({}).then(function(results) {
       res.render("profile", {
         msg: "Welcome!",
-        examples: dbExamples
+        godinez: results
       });
+      console.log(results);
     });
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
+  app.get("/personalinfo/:id", function (req, res) {
+    db.godinezbook.findOne({ where: { id: req.params.id } }).then(function (personalInformation) {
+      res.render("personalinfopage", {
+        personalinfopage: personalInformation
       });
     });
   });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
   });
 };
