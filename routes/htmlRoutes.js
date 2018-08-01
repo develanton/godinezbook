@@ -1,23 +1,58 @@
 var db = require("../models");
+const jwt = require('jsonwebtoken');
 
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Load index page
-  app.get("/", function(req, res) {
-    db.posts.findAll({}).then(function(results) {
-      res.render("profile", {
-        msg: "Welcome!",
-        godinez: results
+  // app.get("/", function (req, res) {
+  //   db.Example.findAll({}).then(function (dbExamples) {
+  //     res.render("login", {
+  //       msg2: "Welcome!"
+  //     });
+  //     console.log(results);
+  //   });
+  // });
+
+  app.get("/register", function (req, res) {
+    res.render("register", {
+      msg2: "FORMA DE REGISTRO"
+    });
+
+  });
+
+  app.get("/register_real", function (req, res) {
+    res.render("register_real", {
+      msg2: "FORMA DE REGISTRO"
+    });
+
+  });
+
+
+  app.get("/welcome", function (req, res) {
+    res.render("welcome", {
+      msg2: "Welcome! jaja"
+    });
+
+  });
+  app.get("/wall", function (req, res) {
+    db.wall.findAll({
+      order: [
+        // Will escape title and validate DESC against a list of valid direction parameters
+        ['id', 'DESC']]
+    }).then(function (messages) {
+      console.log((messages));
+      res.render("wall", {
+        examples: messages
       });
-      console.log(results);
+
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/personalinfo/:id", function (req, res) {
-    db.godinezbook.findOne({ where: { id: req.params.id } }).then(function (personalInformation) {
-      res.render("personalinfopage", {
-        personalinfopage: personalInformation
+
+  app.get("/login", function (req, res) {
+    db.users.findAll({}).then(function(users){
+      res.render("login_full", {
+        msg2: "Welcome!"
       });
     });
   });
