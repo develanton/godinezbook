@@ -1,5 +1,6 @@
 var userData;
 var iduser;
+
 $("#registerButton").on("click", function () {
   console.log("DUDE");
   var userReg = {

@@ -13,9 +13,9 @@ module.exports = function (app) {
   //   });
   // });
 
-  app.get("/register", function (req, res) {
-    res.render("register", {
-      msg2: "FORMA DE REGISTRO"
+  app.get("/", function (req, res) {
+    res.render("login_full", {
+      msg2: "Login"
     });
 
   });
