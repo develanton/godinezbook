@@ -2,9 +2,13 @@ var userData;
 var iduser;
 $("#registerButton").on("click", function () {
   var userReg = {
-    nombre: $("#nombreUsuario").val(),
-    password: $("#userPass").val()
+    nombre: $("#nombreUsuarioR").val(),
+    apellido: $("#apellidoUsuario").val(),
+    email: $("#emailU").val(),
+    password: $("#userPassR").val(),
+    nacimiento: $("#nacimiento").val()
   };
+        
   $.ajax({
     type: "POST",
     url: "/api/registerUser",
@@ -12,18 +16,20 @@ $("#registerButton").on("click", function () {
     success: function (req) {
       if(req.mensaje=="USUARIO"){
         console.log("USUARIO EQUIVOCADO");
-        alert("Usuario ya Existe favor de Reigistrarse con nuevo usuario");
-        url = "/register";
+        alert("Usuario ya Existe favor de hacer login con su usuario");
+        url = "/login";
+          $(location).attr("href", url); 
+
+  
+      };
+      if(req.mensaje=="AGREGADO"){
+        console.log("USUARIO REGISTRADO");
+        alert("USUARIO REGISTRADO CORRECTAMENTE FAVOR DE HACER LOGIN");
+        url = "/login";
           $(location).attr("href", url); 
   
   
-      } else {
-
-        alert("Usuario Registrado Correctamente Favor de hacer Login");
-        url = "/login";
-        $(location).attr("href", url); 
       }
-
       console.log(msg.mensaje);
       
   }

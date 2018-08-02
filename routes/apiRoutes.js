@@ -33,7 +33,7 @@ module.exports = function (app) {
 );
 
   app.post('/api/login', (req, res) => {
-    db.users.findOne({ where: { nombre: req.body.nombre } }).then(project => {
+    db.users.findOne({ where: { email: req.body.email } }).then(project => {
       // project will be the first entry of the Projects table with the title 'aProject' || null
       if (project == null) {
         console.log("No existe nombre de usuario")
@@ -44,11 +44,12 @@ module.exports = function (app) {
       } else {
         const user = {
           id: project.id,
-          username: req.body.nombre,
+          email: req.body.email,
+          username: project.nombre,
           password: req.body.password
         }
         if (req.body.password == project.password) {
-          jwt.sign({ user }, 'secretkey', { expiresIn: '300s' }, (err, token) => {
+          jwt.sign({ user }, 'secretkey', { expiresIn: '3600s' }, (err, token) => {
             res.json({
               token
 
@@ -111,11 +112,11 @@ app.post("/api/messagePost", function(req, res) {
 });
 
 app.post("/api/registerUser", function(req, res) {
-  db.users.findOne({ where: { nombre: req.body.nombre } }).then(project =>{
+  db.users.findOne({ where: { email: req.body.email } }).then(project =>{
     if (project == null) {
       db.users.create(req.body).then(function() {
         return res.json({
-          mensaje: 'LISTO'
+          mensaje: 'AGREGADO'
         });
       });
 

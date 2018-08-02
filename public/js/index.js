@@ -3,7 +3,7 @@ var iduser;
 $("#loginbutton").on("click", function () {
   // sessionStorage.setItem('key', "nada");
   userData = {
-    nombre: $("#nombreUsuario").val(),
+    email: $("#emailUsuario").val(),
     password: $("#userPass").val()
   };
   console.log(userData);
@@ -41,6 +41,11 @@ $("#loginbutton").on("click", function () {
     })
   });
 
+
+});
+
+$("#registerbutton").on("click", function () {
+  console.log("BOTON REGISTRO");
 
 });
 
