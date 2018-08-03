@@ -1,2 +1,18 @@
+DROP DATABASE IF EXISTS godinezbook;
+CREATE DATABASE godinezbook;
 
-CREATE DATABASE users;
+USE godinezbook;
+
+CREATE TABLE usuarios (
+	id INT AUTO_INCREMENT NOT NULL,
+	name VARCHAR(50) NOT NULL,
+	mail VARCHAR(50) NOT NULL,
+	password VARCHAR(50) NOT NULL,
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE posts (
+	id INT  NOT NULL AUTO_INCREMENT,
+	post TEXT NOT NULL,
+	PRIMARY KEY ("id")
+);

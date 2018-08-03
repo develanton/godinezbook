@@ -1,11 +1,11 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "godinezbook",
-    "host": "localhost",
+    "username": "f88yusg89biblgef",
+    "password": "vhacct675v3gp38t",
+    "database": "vw9ezmqsyce5k1et",
+    "host": "k3xio06abqa902qt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "port": 8889
+    "port": 	3306
   },
   "test": {
     "username": "root",
@@ -15,7 +15,6 @@
     "dialect": "mysql",
     "logging": false,
     "port": 8889
-
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
