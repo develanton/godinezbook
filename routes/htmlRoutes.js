@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 
 module.exports = function (app) {
   // Load index page
+<<<<<<< HEAD
   // app.get("/", function (req, res) {
   //   db.Example.findAll({}).then(function (dbExamples) {
   //     res.render("login", {
@@ -16,6 +17,13 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     res.render("login_full", {
       msg2: "Login"
+=======
+  app.get("/", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("landing", {
+        msg2: "Welcome!"
+      });
+>>>>>>> abes
     });
 
   });
@@ -43,6 +51,20 @@ module.exports = function (app) {
       console.log((messages));
       res.render("wall", {
         examples: messages
+        
+      });
+      
+    });
+  });
+
+  app.get("/tanda", function(req, res) {
+    db.tanda.findAll({order: [
+      // Will escape title and validate DESC against a list of valid direction parameters
+      ['id', 'DESC']]}).then(function(tandas) {
+      console.log(tandas);
+      res.render("tanda", {
+        examples: tandas
+        
       });
 
     });

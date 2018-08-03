@@ -6,7 +6,10 @@
     "host": "localhost",
     "dialect": "mysql",
     "port": 8889
+<<<<<<< HEAD
    
+=======
+>>>>>>> abes
   },
   "test": {
     "username": "root",

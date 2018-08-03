@@ -23,11 +23,12 @@ $("#sendMessage").on("click", function () {
     success: function (msg) {
 
       console.log(msg.mensaje);
-      
+      url = "/wall";
+        $(location).attr("href", url);
+       
   }
   });
-  url = "/wall";
-        $(location).attr("href", url);
+  
 
 
 });
@@ -35,6 +36,7 @@ $("#sendMessage").on("click", function () {
 var userid;
 var username;
 $(document).ready(function() {
+    
   var accesDeny="";
   var key ={
     session: sessionStorage.getItem("key")
@@ -46,13 +48,14 @@ $(document).ready(function() {
     success: function (msg) {
       accesDeny=msg.message;
       if(accesDeny=="Denegado"){
+       
         url = "/login";
           $(location).attr("href", url);
       }
       console.log(msg.message);
       userid=msg.authData.user.id;
       username=msg.authData.user.username;
-      
+      $("#nombreUS").text(sessionStorage.getItem("name"));
   }
   });
 });
