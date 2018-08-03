@@ -17,7 +17,11 @@
     "port": 8889
   },
   "production": {
-    "use_env_variable": "Jaws_DB_URL" = "mysql://f88yusg89biblgef:vhacct675v3gp38t@k3xio06abqa902qt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/vw9ezmqsyce5k1et",
-    "dialect": "mysql"
+    "username": "f88yusg89biblgef",
+    "password": "vhacct675v3gp38t",
+    "database": "vw9ezmqsyce5k1et",
+    "host": "k3xio06abqa902qt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "port": 3306
   }
 }
