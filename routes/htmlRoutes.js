@@ -4,26 +4,11 @@ const jwt = require('jsonwebtoken');
 
 module.exports = function (app) {
   // Load index page
-<<<<<<< HEAD
-  // app.get("/", function (req, res) {
-  //   db.Example.findAll({}).then(function (dbExamples) {
-  //     res.render("login", {
-  //       msg2: "Welcome!"
-  //     });
-  //     console.log(results);
-  //   });
-  // });
-
-  app.get("/", function (req, res) {
-    res.render("login_full", {
-      msg2: "Login"
-=======
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("landing", {
         msg2: "Welcome!"
       });
->>>>>>> abes
     });
 
   });
