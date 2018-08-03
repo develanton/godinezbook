@@ -31,11 +31,7 @@ module.exports = function (app) {
 );
 
   app.post('/api/login', (req, res) => {
-<<<<<<< HEAD
-    db.users.findOne({ where: { nombre: req.body.email } }).then(project => {
-=======
     db.users.findOne({ where: { email: req.body.email } }).then(project => {
->>>>>>> abes
       // project will be the first entry of the Projects table with the title 'aProject' || null
       if (project == null) {
         console.log("No existe nombre de usuario")
@@ -46,18 +42,9 @@ module.exports = function (app) {
       } else {
         const user = {
           id: project.id,
-<<<<<<< HEAD
-          name: req.body.name,
-          last: req.body.last,
-          email: req.body.email,
-          password: req.body.password,
-          birthday: req.body.birthday,
-          gender: req.body.gender
-=======
           email: req.body.email,
           username: project.nombre,
           password: req.body.password
->>>>>>> abes
         }
 
 
@@ -136,11 +123,7 @@ app.post("/api/addTanda", function(req, res) {
 
 
 app.post("/api/registerUser", function(req, res) {
-<<<<<<< HEAD
-  db.users.findOne({ where: { name: req.body.name } }).then(project =>{
-=======
   db.users.findOne({ where: { email: req.body.email } }).then(project =>{
->>>>>>> abes
     if (project == null) {
       db.users.create(req.body).then(function() {
         return res.json({
