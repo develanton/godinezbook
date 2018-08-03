@@ -10,28 +10,40 @@ $("#logOut").on("click", function () {
 
 
 
-$("#sendMessage").on("click", function () {
-  var wall = {
-    idusuario: userid,
-    nombre: username,
-    mensaje: $("#messageTosend").val()
+$("#sendTanda").on("click", function () {
+  console.log($("#nombreTanda").val());
+  console.log($( "#participantes option:selected" ).text());
+  console.log($( "#monto option:selected" ).text());
+  console.log(sessionStorage.getItem("id"));
+  var status;
+  var tanda = {
+    organizadorId: sessionStorage.getItem("id"),
+    organizadorNombre: sessionStorage.getItem("name"),
+    nombre: $("#nombreTanda").val(),
+    capacidad: parseInt($( "#participantes option:selected" ).text()),
+    monto: parseInt($( "#monto option:selected" ).text()),
+    inscritos: 0,
+    llena: "NO",
+    activa:"ABIERTA",
+    finalizada: "NO"
+    
   };
   $.ajax({
     type: "POST",
-    url: "/api/messagePost",
-    data: wall,
+    url: "/api/addTanda",
+    data: tanda,
     success: function (msg) {
 
       console.log(msg.mensaje);
-      url = "/wall";
+      url = "/tanda";
         $(location).attr("href", url);
        
   }
   });
-  
-
-
 });
+
+
+
 //DA EL PERMISO AL ACCESO A LA PAGINA
 var userid;
 var username;
