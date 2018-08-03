@@ -1,11 +1,11 @@
 {
   "development": {
-    "username": "f88yusg89biblgef",
-    "password": "vhacct675v3gp38t",
-    "database": "vw9ezmqsyce5k1et",
-    "host": "k3xio06abqa902qt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "root",
+    "database": "godinezbook",
+    "host": "localhost",
     "dialect": "mysql",
-    "port": 	3306
+    "port": 	8889
   },
   "test": {
     "username": "root",
@@ -17,7 +17,7 @@
     "port": 8889
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "use_env_variable": "mysql://f88yusg89biblgef:vhacct675v3gp38t@k3xio06abqa902qt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/vw9ezmqsyce5k1et",
     "dialect": "mysql"
   }
 }
