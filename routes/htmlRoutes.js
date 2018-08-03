@@ -6,7 +6,7 @@ module.exports = function (app) {
   // Load index page
   app.get("/", function(req, res) {
  
-      res.render("landing", {
+      res.render("Landing", {
         msg2: "Welcome!"
       });
  
