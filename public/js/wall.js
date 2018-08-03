@@ -1,14 +1,8 @@
 $("#logOut").on("click", function () {
   sessionStorage.setItem('key', " ");
   url = "/login";
-        $(location).attr("href", url);
-
-
+  $(location).attr("href", url);
 });
-
-
-
-
 
 $("#sendMessage").on("click", function () {
   var wall = {
@@ -24,14 +18,11 @@ $("#sendMessage").on("click", function () {
 
       console.log(msg.mensaje);
       url = "/wall";
-        $(location).attr("href", url);
-       
-  }
+      $(location).attr("href", url);
+    }
   });
-  
-
-
 });
+
 //DA EL PERMISO AL ACCESO A LA PAGINA
 var userid;
 var username;

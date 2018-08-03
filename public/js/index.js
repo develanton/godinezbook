@@ -43,8 +43,6 @@ $("#loginbutton").on("click", function () {
       alert("Usuario no Existe favor de Reigistrarse");
       url = "/login";
       $(location).attr("href", url);
-
-
     } else {
       sessionStorage.setItem('key', res.token);
       sessionStorage.setItem('name', res.name);

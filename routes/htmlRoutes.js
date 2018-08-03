@@ -5,21 +5,13 @@ const jwt = require('jsonwebtoken');
 module.exports = function (app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+ 
       res.render("landing", {
         msg2: "Welcome!"
       });
-    });
+ 
 
   });
-
-  app.get("/register_real", function (req, res) {
-    res.render("register_real", {
-      msg2: "FORMA DE REGISTRO"
-    });
-
-  });
-
 
   app.get("/welcome", function (req, res) {
     res.render("welcome", {
@@ -55,13 +47,11 @@ module.exports = function (app) {
     });
   });
 
-
-  app.get("/login", function (req, res) {
-    db.users.findAll({}).then(function(users){
-      res.render("login_full", {
-        msg2: "Welcome!"
-      });
+  app.get("/profile", function (req, res) {
+    res.render("profile", {
+      msg2: "Welcome! jaja"
     });
+
   });
 
   // Render 404 page for any unmatched routes
@@ -69,3 +59,5 @@ module.exports = function (app) {
     res.render("404");
   });
 };
+
+
