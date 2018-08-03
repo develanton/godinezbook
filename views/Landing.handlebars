@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>Landing Page</title>
+
+	<!-- Required meta tags always come first -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<!-- Main Font -->
+	<script src="./js/webfontloader.min.js"></script>
+
+	<script>
+		WebFont.load({
+			google: {
+				families: ['Roboto:300,400,500,700:latin']
+			}
+		});
+	</script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="./Bootstrap/dist/css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="./Bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./Bootstrap/dist/css/bootstrap-grid.css">
+
+	<!-- Main Styles CSS -->
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="stylesheet" type="text/css" href="./css/fonts.css">
+
+
+
+</head>
+
+<body class="landing-page">
+
+	<div class="content-bg-wrap"></div>
+
+
+	<!-- Header Standard Landing  -->
+
+
+
+	<!-- ... end Header Standard Landing  -->
+	<div class="header-spacer--standard"></div>
+
+	<div class="container">
+		<div class="row display-flex">
+			<div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+				<div class="landing-content">
+					<img src="./images/godinez-logo.png" alt="Godinez" style="width:100%;">
+				</div>
+			</div>
+
+			<div class="col col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12">
+
+				<!-- Login-Registration Form  -->
+
+				<div class="registration-login-form">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="nav-item">
+							<a id="log" class="nav-link active" data-toggle="tab" href="#home" role="tab">
+								<svg class="olymp-login-icon">
+									<use xlink:href="svg-icons/sprites/icons.svg#olymp-login-icon"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a id="registro" class="nav-link" data-toggle="tab" href="#profile" role="tab">
+								<svg class="olymp-register-icon">
+									<use xlink:href="svg-icons/sprites/icons.svg#olymp-register-icon"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active" id="home" role="tabpanel" data-mh="log-tab">
+							<div class="title h6">Únete a Godinezbook</div>
+							<form class="content">
+								<div class="row">
+									<div class="col col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+										<div class="form-group label-floating is-empty">
+											<label class="control-label">Nombre</label>
+											<input id="nombreUsuarioR" class="form-control" placeholder="" type="text">
+										</div>
+									</div>
+									<div class="col col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+										<div class="form-group label-floating is-empty">
+											<label class="control-label">Apellido</label>
+											<input id="apellidoUsuario" class="form-control" placeholder="" type="text">
+										</div>
+									</div>
+									<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+										<div class="form-group label-floating is-empty">
+											<label  class="control-label">Email</label>
+											<input id="emailU" class="form-control" placeholder="" type="email">
+										</div>
+										<div class="form-group label-floating is-empty">
+											<label class="control-label">Constraseña</label>
+											<input id="userPassR" class="form-control" placeholder="" type="password">
+										</div>
+
+										<div class="form-group date-time-picker label-floating">
+											<label class="control-label">Fecha de Nacimiento</label>
+											<input id="nacimiento" name="datetimepicker" value="10/24/1984" />
+											<span class="input-group-addon">
+												<svg class="olymp-calendar-icon">
+													<use xlink:href="svg-icons/sprites/icons.svg#olymp-calendar-icon"></use>
+												</svg>
+											</span>
+										</div>
+
+										<div class="form-group label-floating is-select">
+											<label class="control-label">Sexo</label>
+											<select id="sexo" class="selectpicker form-control">
+												<option value="Masculino">Masculino</option>
+												<option value="Femenino">Femenino</option>
+											</select>
+										</div>
+
+										<div class="remember">
+											<div class="checkbox">
+												<label>
+													<input name="optionsCheckboxes" type="checkbox"> Acepto los
+													<a href="#">Terminos y condiciones</a> de esta pagina.
+												</label>
+											</div>
+										</div>
+
+										<a href="#" id="registerButton" class="btn btn-purple btn-lg full-width">Regístrate!</a>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<div class="tab-pane" id="profile" role="tabpanel" data-mh="log-tab">
+							<div class="title h6">Iniciar sesión</div>
+							<form class="content">
+								<div class="row">
+
+									<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+										<br>
+										<br>
+										<div class="form-group label-floating is-empty">
+											<label class="control-label">Email</label>
+											<input class="form-control" placeholder="" type="email">
+										</div>
+										<br>
+										<br>
+										<div class="form-group label-floating is-empty">
+											<label class="control-label">Contraseña</label>
+											<input class="form-control" placeholder="" type="password">
+										</div>
+										<br>
+										<br>
+										<div class="remember">
+
+											<div class="checkbox">
+												<label>
+													<input name="optionsCheckboxes" type="checkbox"> Recuérdame
+												</label>
+											</div>
+											<a href="#" class="forgot">Olvidé mi constraseña</a>
+										</div>
+
+										<a href="#" id="loginbutton" class="btn btn-lg btn-primary full-width">Iniciar sesión</a>
+
+
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<!-- ... end Login-Registration Form  -->
+			</div>
+		</div>
+	</div>
+
+
+	<!-- JS Scripts -->
+	<script src="./js/jquery-3.2.1.js"></script>
+	<script src="./js/jquery.appear.js"></script>
+	<script src="./js/jquery.mousewheel.js"></script>
+	<script src="./js/perfect-scrollbar.js"></script>
+	<script src="./js/jquery.matchHeight.js"></script>
+	<script src="./js/svgxuse.js"></script>
+	<script src="./js/imagesloaded.pkgd.js"></script>
+	<script src="./js/Headroom.js"></script>
+	<script src="./js/velocity.js"></script>
+	<script src="./js/ScrollMagic.js"></script>
+	<script src="./js/jquery.waypoints.js"></script>
+	<script src="./js/jquery.countTo.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/material.min.js"></script>
+	<script src="./js/bootstrap-select.js"></script>
+	<script src="./js/smooth-scroll.js"></script>
+	<script src="./js/selectize.js"></script>
+	<script src="./js/swiper.jquery.js"></script>
+	<script src="./js/moment.js"></script>
+	<script src="./js/daterangepicker.js"></script>
+	<script src="./js/simplecalendar.js"></script>
+	<script src="./js/fullcalendar.js"></script>
+	<script src="./js/isotope.pkgd.js"></script>
+	<script src="./js/ajax-pagination.js"></script>
+	<script src="./js/Chart.js"></script>
+	<script src="./js/chartjs-plugin-deferred.js"></script>
+	<script src="./js/circle-progress.js"></script>
+	<script src="./js/loader.js"></script>
+	<script src="./js/run-chart.js"></script>
+	<script src="./js/jquery.magnific-popup.js"></script>
+	<script src="./js/jquery.gifplayer.js"></script>
+	<script src="./js/mediaelement-and-player.js"></script>
+	<script src="./js/mediaelement-playlist-plugin.min.js"></script>
+
+	<script src="./js/base-init.js"></script>
+	<script defer src="./fonts/fontawesome-all.js"></script>
+
+	<script src="./Bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+	<script src="/js/index.js"></script>
+	<script src="/js/register.js"></script>
+</body>
+
+</html>
