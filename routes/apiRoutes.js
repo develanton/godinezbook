@@ -46,6 +46,9 @@ module.exports = function (app) {
           username: project.nombre,
           password: req.body.password
         }
+
+
+
         if (req.body.password == project.password) {
           jwt.sign({ user }, 'secretkey', { expiresIn: '3600s' }, (err, token) => {
             res.json({
