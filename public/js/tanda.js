@@ -61,7 +61,7 @@ $(document).ready(function() {
       accesDeny=msg.message;
       if(accesDeny=="Denegado"){
        
-        url = "/login";
+        url = "/";
           $(location).attr("href", url);
       }
       console.log(msg.message);
