@@ -50,16 +50,14 @@ $("#loginbutton").on("click", function () {
 
       console.log("token en front " + res.token);
       console.log("nombre en front " + res.name);
-
     }
-  }).then(function () {
-
+  }).then(function() {
     $.ajax({
       url: '/api/posts',
       type: 'post',
       headers: {
-        Authorization: sessionStorage.getItem('key'),   //If your header name has spaces or any other char not appropriate
-
+        Authorization: sessionStorage.getItem('key'),  
+        //If your header name has spaces or any other char not appropriate
       },
       dataType: 'json',
       success: function (data) {
@@ -67,15 +65,10 @@ $("#loginbutton").on("click", function () {
         url = "/wall";
         $(location).attr("href", url);
       }
-
-    })
+    });
   });
-
-
 });
 
 $("#registerbutton").on("click", function () {
   console.log("BOTON REGISTRO");
-
 });
-
