@@ -1,26 +1,25 @@
 //DA EL PERMISO AL ACCESO A LA PAGINA
 var userid;
 var username;
-$(document).ready(function() {
-  var accesDeny="";
-  var key ={
+$(document).ready(function () {
+  var accesDeny = "";
+  var key = {
     session: sessionStorage.getItem("key")
-  }; 
+  };
   $.ajax({
     type: "POST",
     url: "/api/check",
     data: key,
     success: function (msg) {
-      accesDeny=msg.message;
-      if(accesDeny!="Denegado"){
+      accesDeny = msg.message;
+      if (accesDeny != "Denegado") {
         url = "/wall";
-          $(location).attr("href", url);
+        $(location).attr("href", url);
       }
       console.log(msg.message);
-      userid=msg.authData.user.id;
-      username=msg.authData.user.username;
-      
-  }
+      userid = msg.authData.user.id;
+      username = msg.authData.user.username;
+    }
   });
 });
 //SE TERMINA EL VERIFICADOR DE ACCESO A LA PAGINA
@@ -39,20 +38,20 @@ $("#loginbutton").on("click", function () {
     // console.log("ENTRO!");
 
     console.log(res.mensaje);
-    if(res.mensaje=="USUARIO"){
+    if (res.mensaje == "USUARIO") {
       console.log("USUARIO EQUIVOCADO");
       alert("Usuario no Existe favor de Reigistrarse");
       url = "/login";
-        $(location).attr("href", url); 
+      $(location).attr("href", url);
 
 
     } else {
-    sessionStorage.setItem('key', res.token);
-    sessionStorage.setItem('name', res.name);
-    sessionStorage.setItem('id', res.id);
- 
-    console.log("token en front " + res.token);
-    console.log("nombre en front " + res.name);
+      sessionStorage.setItem('key', res.token);
+      sessionStorage.setItem('name', res.name);
+      sessionStorage.setItem('id', res.id);
+
+      console.log("token en front " + res.token);
+      console.log("nombre en front " + res.name);
 
     }
   }).then(function () {
