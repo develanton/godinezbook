@@ -21,22 +21,69 @@ module.exports = function (sequelize, DataTypes) {
     user3id: DataTypes.STRING,
     user4: DataTypes.STRING,
     user4id: DataTypes.STRING,
-    up12: DataTypes.STRING,
-    up13: DataTypes.STRING,
-    up14: DataTypes.STRING,
-    up21: DataTypes.STRING,
-    up23: DataTypes.STRING,
-    up24: DataTypes.STRING,
-    up31: DataTypes.STRING,
-    up32: DataTypes.STRING,
-    up34: DataTypes.STRING,
-    up41: DataTypes.STRING,
-    up42: DataTypes.STRING,
-    up43: DataTypes.STRING,
-    pag1: DataTypes.STRING,
-    pag2: DataTypes.STRING,
-    pag3: DataTypes.STRING,
-    pag4: DataTypes.STRING
-  });
+    up12: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    up13: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    up14: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    up21: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    up23: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    up24: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    up31: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    up32: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    up34: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    up41: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    up42: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    up43: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    pag1: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    pag2: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    pag3: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },
+    pag4: {
+      type: DataTypes.STRING,
+      defaultValue: "danger"
+    },  });
   return tanda;
 };

@@ -44,12 +44,12 @@
     </div>
     <div style="margin-left:15px;margin-top:27px;margin-bottom:auto;" class="">
       <h6>
-        <a href="/wall">Wall</a>
+        <a href="/wall">Muro</a>
       </h6>
     </div>
     <div style="margin-left:15px;margin-top:27px;margin-bottom:auto;" class="">
       <h6>
-        <a href="/friends">Friends</a>
+        <a href="/friends">Godinez</a>
       </h6>
     </div>
     <div style="margin-left:15px;margin-top:27px;margin-bottom:auto;" class="">
@@ -65,7 +65,7 @@
           <div class="form-group"></div>
           <h4 style="color:red;">Welcome</h4>
           <h4 style="color:white;" id="nombreUS"></h4>
-          <button id="logOut" class="btn btn-primary float-right">Logout</button>
+          <button id="logOut" class="btn btn-primary float-right">Salir</button>
         </form>
 
       </div>
@@ -74,7 +74,7 @@
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
-        <h2>Create Tanda!</h2>
+        <h2>Crea tu Tanda!</h2>
         <div class="form-group">
           <label for="exampleFormControlInput1">Nombre de Tanda</label>
           <input style="background-color:white;" type="text" class="form-control" id="nombreTanda" placeholder="Nombre Tanda">
@@ -99,21 +99,19 @@
           </select>
         </div>
 
-        <button id="sendTanda" class="btn btn-primary float-right">Submit</button>
+        <button id="sendTanda" class="btn btn-primary float-right">Crear</button>
 
 
       </div>
     </div>
   </div>
 
+{{#each examples}}
 
-
-  <div class="container"></div>
-  
-       {{#each examples}}
+  <div class="container">
       <div class="col-8 offset-2 card">
         <div data-id="{{this.id}}" class="card-body">
-          <table class="table">
+        <table class="table">
   <thead>
     <tr>
       <th scope="col"></th>
@@ -162,33 +160,33 @@
       <th scope="row">1</th>
       <td>{{this.user1}}</td>
       <td><img style="width:30px;"src="/images/money.png"</td>
-      <td casilla="up12"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td casilla="up13"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td casilla="up14"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
+      <td idtanda={{this.id}} casilla="up12"><button  type="button" class="btn btn-{{this.up12}} pago">PAGO</button></td>
+      <td idtanda={{this.id}} casilla="up13"><button  type="button" class="btn btn-{{this.up13}} pago">PAGO</button></td>
+      <td idtanda={{this.id}} casilla="up14"><button  type="button" class="btn btn-{{this.up14}} pago">PAGO</button></td>
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>{{this.user2}}</td>
-      <td casilla="up21"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
+      <td idtanda={{this.id}} casilla="up21"><button type="button" class="btn btn-{{this.up21}} pago">PAGO</button></td>
       <td><img style="width:30px;"src="/images/money.png"</td>
       
-      <td casilla="up23"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td casilla="up24"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
+      <td idtanda={{this.id}} casilla="up23"><button type="button" class="btn btn-{{this.up23}} pago">PAGO</button></td>
+      <td idtanda={{this.id}} casilla="up24"><button type="button" class="btn btn-{{this.up24}} pago">PAGO</button></td>
     </tr>
     <tr>
       <th scope="row">3</th>
       <td>{{this.user3}}</td>
-      <td casilla="up31"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td casilla="up32"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
+      <td idtanda={{this.id}} casilla="up31"><button type="button" class="btn btn-{{this.up31}} pago">PAGO</button></td>
+      <td idtanda={{this.id}} casilla="up32"><button type="button" class="btn btn-{{this.up32}} pago">PAGO</button></td>
       <td><img style="width:30px;"src="/images/money.png"</td>
-      <td casilla="up34"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
+      <td idtanda={{this.id}} casilla="up34"><button type="button" class="btn btn-{{this.up34}} pago">PAGO</button></td>
     </tr>
      <tr>
       <th scope="row">4</th>
      <td>{{this.user4}}</td>
-      <td casilla="up41"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td casilla="up42"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td casilla="up43"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
+      <td idtanda={{this.id}} casilla="up41"><button type="button" class="btn btn-{{this.up41}} pago">PAGO</button></td>
+      <td idtanda={{this.id}} casilla="up42"><button type="button" class="btn btn-{{this.up42}} pago">PAGO</button></td>
+      <td idtanda={{this.id}} casilla="up43"><button type="button" class="btn btn-{{this.up43}} pago">PAGO</button></td>
       <td><img style="width:30px;"src="/images/money.png"</td>
 
       
@@ -198,17 +196,16 @@
 
 </div>
 </div>
-      </div>
+</div>
+
       
       {{/each}}
-      <td></td>
-      <td></td>
       
-    </tr>
+
     
-  </tbody>
+
   
-</table>
+
       
       
 

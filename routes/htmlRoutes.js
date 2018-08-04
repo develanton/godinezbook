@@ -38,6 +38,12 @@ module.exports = function (app) {
     db.tanda.findAll({order: [
       // Will escape title and validate DESC against a list of valid direction parameters
       ['id', 'DESC']]}).then(function(tandas) {
+
+        // if(tandas.up12=="pagado"){
+        //   tandas.up2="success";
+        // }else 
+        // tanda.up="danger";
+
       console.log(tandas);
       res.render("tanda", {
         examples: tandas
@@ -46,10 +52,28 @@ module.exports = function (app) {
 
     });
   });
+  app.get("/friends", function(req, res) {
+    db.users.findAll().then(function(friends) {
 
-  app.get("/profile", function (req, res) {
-    res.render("profile", {
-      msg2: "Welcome! jaja"
+        // if(tandas.up12=="pagado"){
+        //   tandas.up2="success";
+        // }else 
+        // tanda.up="danger";
+
+
+      res.render("friends", {
+        examples: friends
+        
+      });
+
+    });
+  });
+
+  app.get("/login", function (req, res) {
+    db.users.findAll({}).then(function(users){
+      res.render("login_full", {
+        msg2: "Welcome!"
+      });
     });
 
   });

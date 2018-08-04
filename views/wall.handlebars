@@ -36,71 +36,61 @@
   <header class="header header--logout" id="site-header">
 
 
-    <div class="page-title">
-      <a href="/wall">
-        <img src="/images/Godinez.png" alt="" width="200px;">
-      </a>
-    </div>
-    <div style="margin-left:15px;margin-top:27px;margin-bottom:auto;" class="">
-      <h6>
-        <a href="/wall">Wall</a>
-      </h6>
-    </div>
-    <div style="margin-left:15px;margin-top:27px;margin-bottom:auto;" class="">
-      <h6>
-        <a href="/friends">Friends</a>
-      </h6>
-    </div>
-    <div style="margin-left:15px;margin-top:27px;margin-bottom:auto;" class="">
-      <h6>
-        <a href="/tanda">Tanda</a>
-      </h6>
-    </div>
+  <div class="page-title">
+    <h6>GodinezBook!</h6>
+  </div>
+  <div style="margin-left:15px;margin-top:27px;margin-bottom:auto;"class="">
+    <h6><a href="/wall">Muro</a></h6>
+  </div>
+  <div style="margin-left:15px;margin-top:27px;margin-bottom:auto;"class="">
+    <h6><a href="/friends">Godinez</a></h6>
+  </div>
+  <div style="margin-left:15px;margin-top:27px;margin-bottom:auto;"class="">
+    <h6><a href="/tanda">Tanda</a></h6>
+  </div>
 
     <div class="header-content-wrapper">
 
-      <div class="form--login-logout">
-        <form class="form-inline">
-          <div class="form-group"></div>
-          <h4 style="color:red;">Welcome</h4>
-          <h4 style="color:white;" id="nombreUS"></h4>
-          <button id="logOut" class="btn btn-primary float-right">Logout</button>
+    <div class="form--login-logout">
+      <form class="form-inline">
+        <div class="form-group"></div>
+        <h4 style="color:red;">Welcome</h4>
+        <h4 style="color:white;"id="nombreUS"></h4>
+        <button id="logOut" class="btn btn-primary float-right">Salir</button>
 
         </form>
 
 
       </div>
     </div>
+  </div>
 
-  </header>
+</header>
 
-  {{!--
-  <div id="home"> --}}
-    <div class="container">
-      <div class="row">
-        <div class="col-8 offset-2">
-          <h2>This is the Wall!</h2>
-          <form class="clearfix mb-4" action="POST">
-            <div class="form-group">
-              <label for="example-description">Send Message</label>
-              <textarea style="background-color:white;" class="form-control" id="messageTosend" aria-describedby="example-description"
-                placeholder="Message to Send"></textarea>
-            </div>
-          </form>
-          <button id="sendMessage" class="btn btn-primary float-right">Submit</button>
-
-          <h3>Messages:</h3>
-          <ul id="example-list" class="list-group">
-            {{#each examples}} {{this.nombre}} says:
-            <li data-id="{{this.idusuario}}" class="list-group-item">
-              <p>{{this.mensaje}}</p>
-              <p>{{this.createdAt}}</p>
-              {{!--
-              <button class="btn btn-danger float-right delete">ｘ</button> --}}
-            </li>
-            {{/each}}
-          </ul>
-        </div>
+{{!-- <div id="home"> --}}
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h2>Publica tus Mensajes!</h2>
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="example-description">Enviar Mensaje</label>
+            <textarea style="background-color:white;" class="form-control" id="messageTosend" aria-describedby="example-description" placeholder="Message a Enviar"></textarea>
+          </div>
+        </form>
+        <button id="sendMessage" class="btn btn-primary float-right">Enviar</button>
+       
+        <h3>Mensajes:</h3>
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          {{this.nombre}} dice:  
+          <li data-id="{{this.idusuario}}" class="list-group-item">
+            <p>{{this.mensaje}}</p>
+            <p>{{this.createdAt}}</p>
+            {{!-- <button class="btn btn-danger float-right delete">ｘ</button> --}}
+          </li>
+          {{/each}}
+        </ul>
       </div>
     </div>
     {{!-- </div> --}}

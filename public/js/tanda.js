@@ -30,6 +30,34 @@ $.ajax({
 
 });
 
+
+$(".pago").on("click", function () {
+  var idTanda={
+    idTanda :$(this).parent().attr("idtanda"),
+    pago :$(this).parent().attr("casilla"),
+    idSesion: parseInt(sessionStorage.getItem("id")), 
+    idNombre: sessionStorage.getItem("name") };
+
+console.log (idTanda);
+
+$.ajax({
+  type: "POST",
+  url: "/api/pago",
+  data: idTanda,
+  success: function (res) {
+
+    if(res.mensaje=="NO ERES EL ORGANIZADOR"){
+    alert(res.mensaje);}else{
+    url = "/tanda";
+    $(location).attr("href", url);}
+    // url = "/tanda";
+    //   $(location).attr("href", url);
+     
+}
+});
+
+});
+
 $("#sendTanda").on("click", function () {
   console.log($("#nombreTanda").val());
   console.log($( "#participantes option:selected" ).text());
