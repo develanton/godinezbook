@@ -208,6 +208,10 @@ module.exports = function (app) {
         return res.json({
           mensaje: 'NO ERES EL ORGANIZADOR'
         });
+      }else if (project.inscritos<4){
+        return res.json({
+          mensaje: 'No se puede registrar pago sino están todos los participantes'
+        });
       }else{
       switch (req.body.idSesion == project.organizadorId) {
         case req.body.pago == "up12":

@@ -47,7 +47,11 @@ $.ajax({
   success: function (res) {
 
     if(res.mensaje=="NO ERES EL ORGANIZADOR"){
-    alert(res.mensaje);}else{
+    alert(res.mensaje);
+  }else if(res.mensaje=="No se puede registrar pago sino están todos los participantes")
+  {
+      alert(res.mensaje);}
+      else{
     url = "/tanda";
     $(location).attr("href", url);}
     // url = "/tanda";
