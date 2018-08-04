@@ -107,7 +107,7 @@
 {{#each examples}}
 
   <div class="container">
-      <div class="col-8 offset-2 card">
+      <div style="border-style:solid; border-solo:black;"class="col-8 offset-2 card">
         <div data-id="{{this.id}}" class="card-body">
         <table class="table">
   <thead>
@@ -139,7 +139,9 @@
      <td></td>
       <td></td>
       <td></td>
-     
+     </tr></tbody>
+     </table>
+    
       <table class="table">
   <thead>
     <tr>
@@ -153,7 +155,7 @@
     </tr>
   </thead>
 
-
+<tbody>
     <tr>
       <th scope="row">1</th>
       <td>{{this.user1}}</td>
@@ -188,10 +190,9 @@
       <td><img style="width:30px;"src="/images/money.png"</td>
 
       
-      
     </tr>
   </tbody>
-
+</table>
 </div>
 </div>
 </div>
