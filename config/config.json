@@ -1,6 +1,6 @@
 
 {
-  "development": {
+  "development":{
     "username": "root",
     "password": "root",
     "database": "godinezbook",
@@ -8,7 +8,7 @@
     "dialect": "mysql",
     "port": 	8889
   },
-  "test": {
+  "test":{
     "username": "root",
     "password": "root",
     "database": "godinezbook",
@@ -17,7 +17,7 @@
     "logging": false,
     "port": 8889
   },
-  "production": {
+  "production":{
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
