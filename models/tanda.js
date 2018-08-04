@@ -19,6 +19,8 @@ module.exports = function (sequelize, DataTypes) {
     user2id: DataTypes.STRING,
     user3: DataTypes.STRING,
     user3id: DataTypes.STRING,
+    user4: DataTypes.STRING,
+    user4id: DataTypes.STRING,
     up12: DataTypes.STRING,
     up13: DataTypes.STRING,
     up14: DataTypes.STRING,

@@ -103,18 +103,14 @@
       </div>
     </div>
   </div>
-
-
-
-  <div class="container"></div>
-  
+  <div class="container">
+    <div class="row">
        {{#each examples}}
       <div class="col-8 offset-2 card">
         <div data-id="{{this.id}}" class="card-body">
           <table class="table">
   <thead>
     <tr>
-      <th scope="col"></th>
       <th scope="col">Creada Por</th>
       <th scope="col">Nombre Tanda</th>
       <th scope="col">Capacidad</th>
@@ -125,7 +121,7 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row"></th>
+      <th scope="row">1</th>
       <td>{{this.organizadorNombre}}</td>
       <td>{{this.nombre}}</td>
       <td>{{this.capacidad}}</td>
@@ -136,79 +132,61 @@
     <tr>
       <th scope="row"></th>
       <td></td>
+      
+      <td><button style="align:center;"  id="{{this.id}}" class="btn btn-primary unirte"> Unirte </button></td>
+      <td userid={{this.id}}><button style="align:center;"  id="{{this.id}}" class="btn btn-primary detalle"> Detalle </button></td>
       <td></td>
-      <td data-id={{this.id}}><button style="align:center;"  id="{{this.id}}" class="btn btn-primary unirte"> Unirte </button></td>
-     <td></td>
-      <td></td>
-      <td></td>
-     
-      <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Turno</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Ronda 1</th>
-      <th scope="col">Ronda 2</th>
-      <th scope="col">Ronda 3</th>
-      <th scope="col">Ronda 4</th>
-      
-    </tr>
-  </thead>
-
-
-    <tr>
-      <th scope="row">1</th>
-      <td>{{this.user1}}</td>
-      <td><img style="width:30px;"src="/images/money.png"</td>
-      <td casilla="up12"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td casilla="up13"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td casilla="up14"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>{{this.user2}}</td>
-      <td casilla="up21"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td><img style="width:30px;"src="/images/money.png"</td>
-      
-      <td casilla="up23"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td casilla="up24"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>{{this.user3}}</td>
-      <td casilla="up31"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td casilla="up32"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td><img style="width:30px;"src="/images/money.png"</td>
-      <td casilla="up34"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-    </tr>
-     <tr>
-      <th scope="row">4</th>
-     <td>{{this.user4}}</td>
-      <td casilla="up41"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td casilla="up42"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td casilla="up43"><button id="pago" type="button" class="btn btn-success">PAGO</button></td>
-      <td><img style="width:30px;"src="/images/money.png"</td>
-
-      
-      
-    </tr>
-  </tbody>
-
-</div>
-</div>
-      </div>
-      
-      {{/each}}
-      <td></td>
-      <td></td>
-      
     </tr>
     
   </tbody>
   
 </table>
+          {{!-- <h5 style="text-align:center;"class="card-title">Tanda Creada por {{this.organizadorNombre}}</h5>
+          <p style="text-align:center;"class="card-text">Nombre: {{this.nombre}} Capacidad: {{this.capacidad}}</p>
+          <p style="text-align:center;"class="card-text">Capacidad: {{this.capacidad}}</p>
+          <p style="text-align:center;"class="card-text">Inscritos: {{this.inscritos}}</p>
+          <p style="text-align:center;"class="card-text">Monto de Tanda: {{this.monto}}</p>
+          <p style="text-align:center;"class="card-text">Status: {{this.activa}} </p>
+          <button style="align:center;"  id="{{this.id}}" class="btn btn-primary unirte"> Unirte </button>
+           <button style="align:center;"  id="{{this.id}}" class="btn btn-primary detalle"> Detalle </button> --}}
+        </div>
+      </div>
+      <div class="col-8 offset-2">
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      {{/each}}
       
-      
+
+
 
     </div>
   </div>
