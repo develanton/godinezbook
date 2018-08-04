@@ -7,8 +7,28 @@ $("#logOut").on("click", function () {
 });
 
 
+$(".unirte").on("click", function () {
+  var idTanda={
+    idTanda :$(this).parent().attr("data-id"),
+    idSesion: parseInt(sessionStorage.getItem("id")), 
+    idNombre: sessionStorage.getItem("name") };
 
+console.log (idTanda);
 
+$.ajax({
+  type: "POST",
+  url: "/api/unirTanda",
+  data: idTanda,
+  success: function (msg) {
+
+    console.log(msg.mensaje);
+    url = "/tanda";
+      $(location).attr("href", url);
+     
+}
+});
+
+});
 
 $("#sendTanda").on("click", function () {
   console.log($("#nombreTanda").val());
@@ -20,7 +40,7 @@ $("#sendTanda").on("click", function () {
     organizadorId: sessionStorage.getItem("id"),
     organizadorNombre: sessionStorage.getItem("name"),
     nombre: $("#nombreTanda").val(),
-    capacidad: parseInt($( "#participantes option:selected" ).text()),
+    capacidad: 4,
     monto: parseInt($( "#monto option:selected" ).text()),
     inscritos: 0,
     llena: "NO",
@@ -61,7 +81,7 @@ $(document).ready(function() {
       accesDeny=msg.message;
       if(accesDeny=="Denegado"){
        
-        url = "/login";
+        url = "/";
           $(location).attr("href", url);
       }
       console.log(msg.message);

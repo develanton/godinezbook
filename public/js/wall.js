@@ -1,7 +1,9 @@
 $("#logOut").on("click", function () {
   sessionStorage.setItem('key', " ");
-  url = "/login";
-  $(location).attr("href", url);
+  url = "/landing";
+        $(location).attr("href", url);
+
+
 });
 
 $("#sendMessage").on("click", function () {
@@ -38,7 +40,7 @@ $(document).ready(function() {
     success: function (msg) {
       accesDeny=msg.message;
       if(accesDeny=="Denegado"){
-        url = "/login";
+        url = "/";
         $(location).attr("href", url);
       }
       console.log(msg.message);

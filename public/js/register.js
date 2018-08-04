@@ -1,7 +1,7 @@
 var userData;
 var iduser;
 
-$("#registerButton").on("click", function() {
+$("#registerButton").on("click", function () {
   console.log("DUDE");
   var userReg = {
     nombre: $("#nombreUsuarioR").val(),
@@ -15,11 +15,11 @@ $("#registerButton").on("click", function() {
     type: "POST",
     url: "/api/registerUser",
     data: userReg,
-    success: function(req) {
+    success: function (req) {
       if (req.mensaje == "USUARIO") {
         console.log("USUARIO EQUIVOCADO");
         alert("Usuario ya Existe favor de hacer login con su usuario");
-        url = "/login";
+        url = "/";
         $(location).attr("href", url);
       };
       if (req.mensaje == "AGREGADO") {
@@ -38,5 +38,8 @@ $("#registerButton").on("click", function() {
       }
     }
   });
+
+
   console.log("FUNCION BOTON");
+
 });

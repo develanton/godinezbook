@@ -41,12 +41,17 @@ $("#loginbutton").on("click", function () {
     if (res.mensaje == "USUARIO") {
       console.log("USUARIO EQUIVOCADO");
       alert("Usuario no Existe favor de Reigistrarse");
-      url = "/login";
+      url = "/";
       $(location).attr("href", url);
+
+
     } else {
       sessionStorage.setItem('key', res.token);
       sessionStorage.setItem('name', res.name);
       sessionStorage.setItem('id', res.id);
+
+      console.log("token en front " + res.token);
+      console.log("nombre en front " + res.name);
 
       console.log("token en front " + res.token);
       console.log("nombre en front " + res.name);
